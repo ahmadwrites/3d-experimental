@@ -1,7 +1,7 @@
 import React, { useRef, useState, Suspense } from "react";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { useSpring, animated, config } from "@react-spring/three";
-import { MeshWobbleMaterial } from "@react-three/drei";
+import { MeshWobbleMaterial, OrbitControls, Text } from "@react-three/drei";
 import { TextureLoader } from "three/src/loaders/TextureLoader";
 
 import "./App.scss";
@@ -65,11 +65,20 @@ function App() {
               </mesh>
               <Shape texture={textureLight} position={[-1.5, 0, 0]} />
               <Shape texture={textureDark} position={[1.5, 0, 0]} />
+              <Text
+                font="https://fonts.gstatic.com/s/orbitron/v9/yMJRMIlzdpvBhQQL_Qq7dys.woff"
+                fontSize={0.2}
+                color="#111"
+                z={99}
+                position={[0, 0, 0]}
+              >
+                &quot;Experimental&quot;
+              </Text>
             </group>
+            <OrbitControls />
           </Suspense>
         </Canvas>
       </div>
-      <h4 className="title">&quot;Experimental&quot;</h4>
     </>
   );
 }
