@@ -1,3 +1,5 @@
+@import url(//db.onlinewebfonts.com/c/480e3d39ed40d6543721946a2d36ccff?family=RZ);  
+
 // $black: #2a2a24;
 
 * {
@@ -15,6 +17,10 @@
   top: 50%;
   transform: translate(-50%, -50%);
   font-size: 3rem;
+  font-family: "RZ", serif;
+  @media screen and (max-width: 400px) {
+    font-size: 2rem;
+  }
 }
 
 // html,
